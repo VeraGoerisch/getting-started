@@ -1,5 +1,5 @@
 export default {
-  target: "server",
+  target: "static",
   ssr: "false",
   /*
    ** Headers of the page
@@ -57,5 +57,8 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
+  },
+  generate: {
+    fallback: true
   }
 };
