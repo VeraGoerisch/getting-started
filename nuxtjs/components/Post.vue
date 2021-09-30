@@ -1,7 +1,6 @@
 <template>
-  <div v-editable="blok" class="py-8 mb-6 text-5xl font-bold text-center">
-    {{ blok.headline }}
-    <img :src="blok.imagelink.url" />
+  <div v-editable="blok" class="py-2">
+    <h1 class="text-lg">blog post</h1>
   </div>
 </template>
 
@@ -12,6 +11,10 @@ export default {
       type: Object,
       required: true
     }
+  },
+
+  mounted() {
+    console.log(this.blok);
   }
 };
 </script>

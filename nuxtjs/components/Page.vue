@@ -1,12 +1,11 @@
 <template>
-  <div
-    v-editable="blok"
-    class="px-6">
+  <div v-editable="blok" class="px-6">
     <component
       v-for="blok in blok.body"
       :key="blok._uid"
       :blok="blok"
-      :is="blok.component" />
+      :is="blok.component"
+    />
   </div>
 </template>
 
@@ -17,6 +16,10 @@ export default {
       type: Object,
       required: true
     }
+  },
+
+  mounted() {
+    //console.log(this.blok);
   }
-}
+};
 </script>
